@@ -1,0 +1,11 @@
+rootProject.name = 'any-old-endpoint'
+
+include "tasks-http-common"
+project(":tasks-http-common").projectDir = file("common")
+include "aoe-server"
+project(":aoe-server").projectDir = file("server")
+include "aoe-client"
+project(":aoe-client").projectDir = file("client")
+
+
+
