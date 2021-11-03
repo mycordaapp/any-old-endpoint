@@ -2,3 +2,45 @@ dependencies {
     //implementation project(":tasks-http-common")
 
 }
+
+
+apply plugin: 'application'
+
+
+mainClassName = "mycorda.app.aoe.server.AppKt"
+
+//jar {
+//    zip64 = true
+//    //destinationDir = new File("${projectDir}/../deployment/server/jar")
+//
+//    from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
+//        exclude "META-INF/*.SF"
+//        exclude "META-INF/*.DSA"
+//        exclude "META-INF/*.RSA"
+//    }
+//
+//    manifest {
+//        attributes "Main-Class": "mycorda.app.aoe.server.AppKt"
+//    }
+//}
+
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    //baseName = 'all-in-one-jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

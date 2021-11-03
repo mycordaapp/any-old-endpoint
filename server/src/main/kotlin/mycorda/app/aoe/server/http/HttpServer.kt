@@ -2,10 +2,10 @@ package mycorda.app.aoe.server.http
 
 import mycorda.app.aoe.server.Logger
 import mycorda.app.aoe.server.Service
+import mycorda.app.aoe.server.ServiceConfig
 import org.http4k.server.*
 
-
-data class HttpServerConfig(val name: String = "httpServer", val port: Int = 8081)
+data class HttpServerConfig(val name: String = "httpServer", val port: Int = 8081) : ServiceConfig
 
 class HttpServer(
     private val logger: Logger,

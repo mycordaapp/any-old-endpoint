@@ -13,6 +13,8 @@ plugins {
     id 'java'
     id "org.jetbrains.kotlin.jvm" version "$kotlinVersion"
     id("org.jetbrains.dokka") version "$kotlinVersion"
+    id 'application'
+
 }
 
 

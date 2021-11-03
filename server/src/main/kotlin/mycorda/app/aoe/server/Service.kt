@@ -4,3 +4,5 @@ interface Service {
     fun start()
     fun stop()
 }
+// marker interface
+interface ServiceConfig {}
