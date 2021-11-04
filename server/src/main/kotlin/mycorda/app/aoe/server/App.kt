@@ -8,7 +8,7 @@ import mycorda.app.aoe.server.sockets.EchoSocketServer
 import mycorda.app.aoe.server.sockets.EchoSocketServerConfig
 import java.lang.RuntimeException
 
-fun main(args: Array<String>) {
+fun main() {
     // todo - should be comming from some little yaml file
     val configs = listOf(AdminServerConfig(),
         HttpServerConfig(),

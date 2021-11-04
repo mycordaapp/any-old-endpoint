@@ -26,10 +26,9 @@ As with everything in [myCorda dot App](https://mycorda.app), this library has m
 * Kotlin 1.4
 * Java 11
 * The [http4k](https://www.http4k.org/) toolkit
-* The [Commons](https://github.com/mycordaapp/commons#readme) module
 
 ## Next Steps
 
-More on starting, configuring and calling endpoints is here [here](./docs/tasks.md)
+More on starting, configuring and calling endpoints is  [here](./docs/any-old-endpoint.md)
 
 
