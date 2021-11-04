@@ -25,8 +25,8 @@ A number of mini services are started, see below. Examples assume everything is 
 
 Starts on port 8080 by default. Endpoints are
 
-* [home](http://localhost:8080/) - A basic home/admin page
-* [log](http://localhost:8080/log) - All logging as text
+* http://localhost:8080/ - A basic home/admin page (todo)
+* http://localhost:8080/log - All logging as text
 
 Using Bash
 
