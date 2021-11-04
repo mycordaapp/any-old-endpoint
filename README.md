@@ -13,7 +13,7 @@ The basic use cases are problems like:
 * I want to deploy a clustered service like Kafka or Zookeeper, and I want to prove that I am publishing endpoints
   correctly to internal and external clients.
 
-`Any old Endpoint` simply a JAR/Container that can deployed instead of a real service. It can be configured to publish a
+`Any old Endpoint` is simply a JAR/Container that can deployed instead of a real service. It can be configured to publish a
 set of simple endpoints for common protocols (currently http, web sockets and vanilla TCP sockets) in place of the real
 service. The name is taken from the expression "Any old thing will do" , i.e. we don't really care what we have, we just
 need something. It is intended for early stage connectivity testing when all that is necessary are some basic endpoints

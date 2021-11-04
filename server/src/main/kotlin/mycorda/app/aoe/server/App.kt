@@ -29,5 +29,4 @@ fun main() {
     }
 
     services.forEach { it.start() }
-
 }
