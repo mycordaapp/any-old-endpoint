@@ -1,11 +1,20 @@
 # Any Old Endpoint
 
-## Docker 
+## Docker
 
 To run under docker using default port mappings:
 
 ```bash
 docker run -d -p 8080:8080 -p 8081:8081 -p 80832:8082 -p 8083:8083  ianmorgan/aoe-server:latest
+```
+
+To build a new docker image:
+
+```bash
+./gradlew clean jar 
+cd server 
+./buildDocker.sh 
+cd ..
 ```
 
 ## Endpoints
@@ -14,9 +23,9 @@ A number of mini services are started, see below. Examples assume everything is 
 
 ### Admin Server
 
-Starts on port 8080 by default. Endpoints are 
+Starts on port 8080 by default. Endpoints are
 
-* [home](http://localhost:8080/) - A basic home/admin page 
+* [home](http://localhost:8080/) - A basic home/admin page
 * [log](http://localhost:8080/log) - All logging as text
 
 Using Bash
@@ -26,13 +35,12 @@ Using Bash
 curl http://localhost:8080/log    
 ```
 
-
 ### Http Server
 
 Some simple test endpoints:
 
 * [ping](http://localhost:8081/ping) - basic ping
-* [echo](http://localhost:8080/echo) - echos posted data 
+* [echo](http://localhost:8080/echo) - echos posted data
 
 Using Bash
 
@@ -44,7 +52,7 @@ curl  http://localhost:8081/ping
 curl -X POST http://localhost:8081/echo --data "foobar"  
 ``` 
 
-### Socket server 
+### Socket server
 
 A simple socket server that echoes input back to the client.
 
