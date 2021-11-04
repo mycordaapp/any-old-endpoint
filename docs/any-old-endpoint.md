@@ -5,7 +5,7 @@
 To run under docker using default port mappings:
 
 ```bash
-docker run -d -p 8080:8080 -p 8081:8081 -p 80832:8082 -p 8083:8083  ianmorgan/aoe-server:latest
+docker run -d -p 8080:8080 -p 8081:8081 -p 8082:8082 -p 8083:8083  ianmorgan/aoe-server:latest
 ```
 
 To build a new docker image:
@@ -39,8 +39,8 @@ curl http://localhost:8080/log
 
 Some simple test endpoints:
 
-* [ping](http://localhost:8081/ping) - basic ping
-* [echo](http://localhost:8080/echo) - echos posted data
+* http://localhost:8081/ping - basic ping
+* http://localhost:8080/echo - echos POSTed data
 
 Using Bash
 
